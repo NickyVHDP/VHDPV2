@@ -63,14 +63,34 @@ h1 {
   text-align: center;
   margin-bottom: 10px;
 }
+
+/* New info spot styling */
 .info-spot {
   font-size: 1rem;
   color: #555;
-  text-align: center;
+  text-align: left;
   margin-bottom: 30px;
-  font-style: italic;
+  font-style: normal;
   user-select: none;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.5;
 }
+.info-spot p {
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+}
+.info-spot ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  margin: 0;
+}
+.info-spot li {
+  margin-bottom: 6px;
+}
+
 .cta {
   background: #d9002d;
   color: white;
@@ -134,12 +154,10 @@ h1 {
   opacity: 1;
   visibility: visible;
 }
-
 #intro-overlay.hidden {
   opacity: 0;
   visibility: hidden;
 }
-
 .intro-text {
   text-align: center;
   font-size: 1.6rem;
@@ -147,7 +165,6 @@ h1 {
   max-width: 300px;
   user-select: none;
 }
-
 #down-arrow {
   font-size: 3rem;
   margin-top: 20px;
@@ -155,12 +172,10 @@ h1 {
   cursor: pointer;
   animation: bounce 1.5s infinite;
 }
-
 @keyframes bounce {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(15px); }
 }
-
 #swipe-text {
   margin-top: 10px;
   font-size: 1rem;
@@ -169,7 +184,6 @@ h1 {
   user-select: none;
   animation: pulse 2s infinite;
 }
-
 @keyframes pulse {
   0%, 100% {
     opacity: 1;
