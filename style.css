@@ -61,7 +61,15 @@ h1 {
   font-size: 1.5rem;
   font-weight: 700;
   text-align: center;
+  margin-bottom: 10px;
+}
+.info-spot {
+  font-size: 1rem;
+  color: #555;
+  text-align: center;
   margin-bottom: 30px;
+  font-style: italic;
+  user-select: none;
 }
 .cta {
   background: #d9002d;
@@ -123,6 +131,8 @@ h1 {
   flex-direction: column;
   z-index: 100000; /* above everything */
   transition: opacity 0.5s ease, visibility 0.5s ease;
+  opacity: 1;
+  visibility: visible;
 }
 
 #intro-overlay.hidden {
