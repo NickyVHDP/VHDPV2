@@ -104,8 +104,11 @@ const downArrow = document.getElementById('down-arrow');
 
 function hideIntro() {
   introOverlay.classList.add('hidden');
-  // Enable scrolling after hiding intro overlay
-  document.body.style.overflow = 'auto';
+
+  // Wait for CSS transition end before enabling scroll
+  introOverlay.addEventListener('transitionend', () => {
+    document.body.style.overflow = 'auto';
+  }, { once: true });
 }
 
 // Disable scrolling initially
