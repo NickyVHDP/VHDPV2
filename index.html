@@ -1,59 +1,71 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Verizon Home Device Protect</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <!-- Intro Overlay -->
-  <div id="intro-overlay">
-    <div class="intro-text">
-      <p>Do you have any tech at home that doesn’t work or that’s broken?</p>
-      <div id="down-arrow">&#8595;</div>
-      <div id="swipe-text">Swipe down to continue</div>
-    </div>
-  </div>
-
-  <!-- Main Content -->
-  <div class="container" id="main-content">
-    <h1>Verizon Home Device Protect</h1>
-
-    <section class="category">
-      <h2>$99 Service Fee</h2>
-      <div id="fee-99" class="tiles"></div>
-    </section>
-
-    <section class="category">
-      <h2>$49 Service Fee</h2>
-      <div id="fee-49" class="tiles"></div>
-    </section>
-
-    <section class="category">
-      <h2>No Service Fee</h2>
-      <div id="fee-0" class="tiles"></div>
-    </section>
-
-    <div class="total">
-      Grand Total: <span id="grand-total">$0</span>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Verizon Home Device Protect</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Intro Overlay -->
+    <div id="intro-overlay">
+      <div class="intro-text">
+        <p>Do you have any tech at home that doesn’t work or that’s broken?</p>
+        <div id="down-arrow">&#8595;</div>
+        <div id="swipe-text">Swipe down to continue</div>
+      </div>
     </div>
 
-    <div class="info-spot">
-      <p>We will do one of the three R’s:<br /><strong>Repair, Replace, or Reimburse.</strong></p>
-      <ul>
-        <li>Yearly allowance of $5,000</li>
-        <li>Covers tech for TWO households</li>
-        <li>Unlimited claims on unlimited items</li>
-      </ul>
+    <!-- Header -->
+    <header class="header">
+      <h1>Verizon Home Device Protect</h1>
+      <p class="tagline">Professional coverage for all your devices</p>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container" id="main-content">
+      <section class="category">
+        <h2>$99 Service Fee</h2>
+        <div id="fee-99" class="tiles"></div>
+      </section>
+
+      <section class="category">
+        <h2>$49 Service Fee</h2>
+        <div id="fee-49" class="tiles"></div>
+      </section>
+
+      <section class="category">
+        <h2>No Service Fee</h2>
+        <div id="fee-0" class="tiles"></div>
+      </section>
+
+      <div class="total">Grand Total: <span id="grand-total">$0</span></div>
+
+      <div class="info-spot">
+        <p>
+          We will do one of the three R’s:<br /><strong
+            >Repair, Replace, or Reimburse.</strong
+          >
+        </p>
+        <ul>
+          <li>Yearly allowance of $5,000</li>
+          <li>Covers tech for TWO households</li>
+          <li>Unlimited claims on unlimited items</li>
+        </ul>
+      </div>
+
+      <div class="cta">
+        <p>Ready to protect your tech? Contact:</p>
+        <strong>Nicky McCracken<br />210-643-1578</strong>
+      </div>
     </div>
 
-    <div class="cta">
-      <p>Ready to protect your tech? Contact:</p>
-      <strong>Nicky McCracken<br />210-643-1578</strong>
-    </div>
-  </div>
-
-  <script src="script.js"></script>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
