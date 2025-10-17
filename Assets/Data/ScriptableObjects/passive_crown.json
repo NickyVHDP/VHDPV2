@@ -1,0 +1,5 @@
+{
+  "id": "crown",
+  "effects": [{"stat": "xpGainMult", "op": "mul", "value": 1.08}],
+  "maxRank": 5
+}

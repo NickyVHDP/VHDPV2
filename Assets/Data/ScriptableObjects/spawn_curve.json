@@ -1,0 +1,19 @@
+[
+  {
+    "timeStart": 0,
+    "timeEnd": 60,
+    "entries": [
+      {"enemy": "slime_small", "weight": 10},
+      {"enemy": "bat", "weight": 6}
+    ]
+  },
+  {
+    "timeStart": 60,
+    "timeEnd": 120,
+    "entries": [
+      {"enemy": "skeleton", "weight": 10},
+      {"enemy": "bat", "weight": 2},
+      {"enemy": "slime_medium", "weight": 5}
+    ]
+  }
+]
