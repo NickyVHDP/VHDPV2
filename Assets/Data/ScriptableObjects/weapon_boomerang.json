@@ -1,0 +1,14 @@
+{
+  "id": "boomerang",
+  "type": "projectile",
+  "baseDamage": 10,
+  "cooldown": 1.2,
+  "projectiles": 1,
+  "pierce": 1,
+  "area": 1.0,
+  "speed": 12,
+  "lifetime": 2.5,
+  "targeting": "nearest",
+  "scalingPerLevel": {"damage": 2, "projectilesEvery": 3},
+  "statusOnHit": [{"type": "bleed", "chance": 0.25, "dps": 4, "duration": 3}]
+}

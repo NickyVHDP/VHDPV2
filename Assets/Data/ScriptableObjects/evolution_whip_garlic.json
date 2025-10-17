@@ -1,0 +1,7 @@
+{
+  "requiresWeapon": "whip",
+  "requiresPassive": "garlic",
+  "minWeaponRank": 8,
+  "minPassiveRank": 5,
+  "resultWeapon": "bloody_whip"
+}
