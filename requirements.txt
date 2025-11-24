@@ -1,0 +1,11 @@
+fastapi
+uvicorn
+sqlalchemy
+jinja2
+python-multipart
+openai
+google-api-python-client
+google-auth
+google-auth-oauthlib
+google-auth-httplib2
+requests
