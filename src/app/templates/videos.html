@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="columns">
+  <div class="column is-two-thirds">
+    <h2 class="subtitle">Source Videos</h2>
+    <table class="table is-fullwidth">
+      <thead>
+        <tr><th>Title</th><th>Status</th><th>Type</th><th>Actions</th></tr>
+      </thead>
+      <tbody>
+        {% for video in videos %}
+        <tr>
+          <td>{{ video.title or 'Untitled' }}</td>
+          <td>{{ video.status.value }}</td>
+          <td>{{ video.source_type.value }}</td>
+          <td><a class="button is-small" href="/videos/{{ video.id }}">View clips</a></td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+  <div class="column">
+    <h2 class="subtitle">Upload Local Video</h2>
+    <form action="/videos/upload" method="post" enctype="multipart/form-data" class="box">
+      <div class="field">
+        <label class="label">Title</label>
+        <div class="control">
+          <input class="input" type="text" name="title" required>
+        </div>
+      </div>
+      <div class="field">
+        <label class="label">File</label>
+        <div class="control">
+          <input class="input" type="file" name="file" accept="video/*" required>
+        </div>
+      </div>
+      <div class="field">
+        <button class="button is-primary" type="submit">Upload</button>
+      </div>
+    </form>
+
+    <h2 class="subtitle">Register YouTube VOD (download manually if required)</h2>
+    <form action="/videos/from-youtube" method="post" class="box">
+      <div class="field">
+        <label class="label">Title</label>
+        <div class="control">
+          <input class="input" type="text" name="title">
+        </div>
+      </div>
+      <div class="field">
+        <label class="label">YouTube URL</label>
+        <div class="control">
+          <input class="input" type="url" name="url" required>
+        </div>
+      </div>
+      <div class="field">
+        <button class="button is-link" type="submit">Register</button>
+      </div>
+    </form>
+
+    <h2 class="subtitle">YouTube Auth</h2>
+    <a class="button is-danger" href="/auth/youtube">Connect YouTube Account</a>
+    <form action="/clips/upload" method="post" style="margin-top: 0.5rem;">
+      <button class="button is-success" type="submit">Upload Approved Clips</button>
+    </form>
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% block content %}
+<a class="button" href="/">Back</a>
+<h2 class="title is-4" style="margin-top: 1rem;">{{ video.title }}</h2>
+<p>Status: <strong>{{ video.status.value }}</strong></p>
+
+{% if video.clips|length == 0 %}
+  <p>No clip candidates yet.</p>
+{% else %}
+  <div class="columns is-multiline">
+    {% for clip in video.clips %}
+      <div class="column is-half">
+        <div class="box">
+          <p><strong>AI Description:</strong> {{ clip.ai_description }}</p>
+          <p>Virality Score: {{ clip.virality_score }}</p>
+          <p>Status: {{ clip.status.value }}</p>
+          {% if clip.preview_video_path %}
+            <video controls style="width: 100%" src="{{ clip.preview_video_path | replace('..','') }}" preload="metadata"></video>
+          {% endif %}
+          <form action="/clips/{{ clip.id }}/approve" method="post">
+            <div class="field">
+              <label class="label">Title</label>
+              <input class="input" type="text" name="title" value="{{ clip.platform_title }}">
+            </div>
+            <div class="field">
+              <label class="label">Description</label>
+              <textarea class="textarea" name="description">{{ clip.platform_description }}</textarea>
+            </div>
+            <div class="buttons">
+              <button class="button is-success" type="submit">Approve</button>
+            </div>
+          </form>
+          <form action="/clips/{{ clip.id }}/reject" method="post">
+            <button class="button is-light" type="submit">Reject</button>
+          </form>
+          {% if clip.preview_video_path %}
+            <p style="margin-top:0.5rem;">Download for TikTok: <a href="{{ clip.preview_video_path }}" download>MP4</a></p>
+          {% endif %}
+          {% if clip.platform_description %}
+            <p><strong>Suggested caption:</strong> {{ clip.platform_description }}</p>
+          {% endif %}
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+{% endif %}
+{% endblock %}
